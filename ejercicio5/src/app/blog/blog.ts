@@ -19,14 +19,14 @@ export class Blog {
   news: Noticia[] = [
     {
       title: 'Primera noticia',
-      image: 'https://picsum.photos/400/200',
-      text: 'Este es el texto de la primera noticia del blog.',
+      image: 'https://picsum.photos/seed/picsum/536/354',
+      text: 'Viaja las montañas del Pirineo. Tranquilidad y serenidad en estado puro.',
       date: '2026-05-03'
     },
     {
       title: 'Segunda noticia',
-      image: 'https://picsum.photos/400/201',
-      text: 'Este es el texto de la segunda noticia del blog.',
+      image: 'https://picsum.photos/id/1060/536/354?blur=2',
+      text: 'Desayuna un buen café en la cafetería Aromas. En Avinguda Madrid 199, Barcelona .',
       date: '2026-05-05'
     },
   ];
