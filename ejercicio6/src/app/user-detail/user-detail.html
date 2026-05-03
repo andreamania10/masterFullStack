@@ -1,1 +1,19 @@
-<p>user-detail works!</p>
+<div class="container mt-4" *ngIf="user">
+    <div class="card shadow-sm mx-auto" style="max-width: 500px;">
+        <img [src]="user.image" class="card-img-top" style="height: 300px; object-fit: cover;" [alt]="user.first_name">
+        <div class="card-body">
+            <h3 class="card-title">{{ user.first_name }} {{ user.last_name }}</h3>
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item"><strong>Username:</strong> {{ user.username }}</li>
+                <li class="list-group-item"><strong>Email:</strong> {{ user.email }}</li>
+            </ul>
+            <div class="d-flex gap-2">
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-secondary" (click)="returnHome()">← Volver</button>
+                    <button class="btn btn-outline-primary" (click)="uploadUser()">Actualizar</button>
+                    <button class="btn btn-outline-danger" (click)="deleteUser()">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

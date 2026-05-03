@@ -6,8 +6,8 @@ import { UserForm } from './user-form/user-form';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: '', component: HomeComponent },
+    { path: 'home', component: HomeComponent },
     { path: 'user/:id', component: UserDetail },
-    { path: 'newUser', component: UserForm },
+    { path: 'newuser', component: UserForm },
     { path: 'updateuser/:id', component: UserForm }
 ];

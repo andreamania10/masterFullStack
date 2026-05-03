@@ -1,19 +1,24 @@
 export interface User {
-    _id: string,
-    name: string,
-    lastName: string,
-    email: string,
-    image: string,
-    age: number
+    _id?: string;
+    id?: number;
+    first_name: string;
+    last_name: string;
+    username: string;
+    email: string;
+    image?: string;
+    password?: string;
 }
 
 export interface ApiResponse {
-    ok: boolean,
-    result: User[],
-    total?: number
+    page: number;
+    per_page: number;
+    total: number;
+    total_pages: number;
+    results: User[];
 }
 
 export interface ApiResponseSingle {
-    ok: boolean,
-    result: User
+    id: string;
+    email: string;
+    image: string;
 }

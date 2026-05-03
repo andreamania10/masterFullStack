@@ -1,1 +1,35 @@
-<p>user-form works!</p>
+<div class="container mt-4">
+    <div class="card shadow-sm mx-auto" style="max-width: 500px;">
+        <div class="card-body">
+            <h3 class="card-title mb-4">{{ isUpdate ? 'Actualizar usuario' : 'Nuevo usuario' }}</h3>
+
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" [(ngModel)]="usuario.first_name" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Apellido</label>
+                <input type="text" class="form-control" [(ngModel)]="usuario.last_name" placeholder="Apellido">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" [(ngModel)]="usuario.username" placeholder="Username">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" [(ngModel)]="usuario.email" placeholder="Email">
+            </div>
+            <div class="mb-3" *ngIf="!isUpdate">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" [(ngModel)]="usuario.password" placeholder="Contraseña">
+            </div>
+
+            <div class="d-flex gap-2 mt-4">
+                <button class="btn btn-secondary" (click)="returnHome()">← Volver</button>
+                <button class="btn btn-success w-100" (click)="saveUser()">
+                    {{ isUpdate ? 'Actualizar' : 'Guardar' }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
