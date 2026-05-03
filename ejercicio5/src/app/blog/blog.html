@@ -1,1 +1,30 @@
-<p>blog works!</p>
+<div class="blog-container">
+
+    <div class="form">
+        <h2>Nueva noticia</h2>
+
+        <input type="text" placeholder="Título" [(ngModel)]="newNews.title">
+
+        <input type="text" placeholder="URL de la imagen" [(ngModel)]="newNews.image">
+
+        <textarea placeholder="Texto de la noticia" [(ngModel)]="newNews.text">
+    </textarea>
+
+        <input type="date" [(ngModel)]="newNews.date">
+
+        <button (click)="agregarNoticia()">Publicar noticia</button>
+    </div>
+
+    <div class="list">
+        <h2>Noticias</h2>
+
+        <div class="news" *ngFor="let noticia of news">
+            <h3>{{ noticia.title }}</h3>
+            <img [src]="noticia.image" [alt]="noticia.title">
+            <p>{{ noticia.text }}</p>
+            <span>{{ noticia.date }}</span>
+        </div>
+
+    </div>
+
+</div>
