@@ -1,30 +1,43 @@
-<div class="blog-container">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="form">
-        <h2>Nueva noticia</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-        <input type="text" placeholder="Título" [(ngModel)]="newNews.title">
+<body>
+    <div class="blog-container">
 
-        <input type="text" placeholder="URL de la imagen" [(ngModel)]="newNews.image">
+        <div class="form">
+            <h2>Nueva noticia</h2>
 
-        <textarea placeholder="Texto de la noticia" [(ngModel)]="newNews.text">
-    </textarea>
+            <input type="text" placeholder="Título" [(ngModel)]="newNews.title">
 
-        <input type="date" [(ngModel)]="newNews.date">
+            <input type="text" placeholder="URL de la imagen" [(ngModel)]="newNews.image">
 
-        <button (click)="agregarNoticia()">Publicar noticia</button>
-    </div>
+            <textarea placeholder="Texto de la noticia" [(ngModel)]="newNews.text">
+        </textarea>
 
-    <div class="list">
-        <h2>Noticias</h2>
+            <input type="date" [(ngModel)]="newNews.date">
 
-        <div class="news" *ngFor="let noticia of news">
-            <h3>{{ noticia.title }}</h3>
-            <img [src]="noticia.image" [alt]="noticia.title">
-            <p>{{ noticia.text }}</p>
-            <span>{{ noticia.date }}</span>
+            <button (click)="agregarNoticia()">Publicar noticia</button>
+        </div>
+
+        <div class="list">
+            <h2>Noticias</h2>
+
+            <div class="news" *ngFor="let noticia of news">
+                <h3>{{ noticia.title }}</h3>
+                <img [src]="noticia.image" [alt]="noticia.title">
+                <p>{{ noticia.text }}</p>
+                <span>{{ noticia.date }}</span>
+            </div>
+
         </div>
 
     </div>
+</body>
 
-</div>
+</html>
