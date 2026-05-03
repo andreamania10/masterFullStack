@@ -25,7 +25,7 @@ export class UserService {
 
   updateUser(id: string, user: User): Observable<ApiResponseSingle> { return this.http.put<ApiResponseSingle>(`${this.apiUrl}/${id}`, user) }
 
-  deteleUser(id: string): Observable<any> {
+  deleteUser(id: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

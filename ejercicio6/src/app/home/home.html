@@ -1,1 +1,39 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mb-4">Listado de usuarios</h2>
+
+        <div class="row">
+            <div class="col-md-4 mb-4" *ngFor="let user of users">
+                <div class="card h-100 text-center shadow-sm">
+                    <img [src]="user.image" class="card-img-top p-3" style="height: 200px; object-fit: cover;"
+                        [alt]="user.name">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ user.name }} {{ user.lastName }}</h5>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <button class="btn btn-primary btn-sm" (click)="moreDetail(user._id)">
+                                Ver detalle
+                            </button>
+                            <button class="btn btn-warning btn-sm" (click)="uploadUserFunction(user._id)">
+                                Actualizar
+                            </button>
+                            <button class="btn btn-danger btn-sm" (click)="deleteUserFunction(user._id, user.name)">
+                                Borrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
